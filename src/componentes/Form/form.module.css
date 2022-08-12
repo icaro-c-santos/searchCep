@@ -1,0 +1,16 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.alert{
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    right: 50%;
+    transform:  translateX(50%);
+}

@@ -1,0 +1,27 @@
+
+.block{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    border: 3px;
+    border: solid;
+    border-color: red;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    
+}
+
+.closed{
+    margin: 5px 5px 0px auto;
+    top:1px;
+    right: 1px;
+    color: rgb(60, 0, 255);
+    cursor: pointer;
+}
+h3{
+
+    font-size: 25px;
+}
+

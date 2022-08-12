@@ -1,0 +1,10 @@
+
+.titleConteiner{
+    font-size: clamp(30px,4vw,45px);
+    justify-content: center;
+    display: flex;
+    color: brown;
+    font-size: 100px;
+    margin: 100px 0px 20px 0px;
+}
+

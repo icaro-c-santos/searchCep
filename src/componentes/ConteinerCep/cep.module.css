@@ -1,0 +1,12 @@
+
+
+div{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+p{
+    color: crimson;
+    font-size: 24px;
+}
