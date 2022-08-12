@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/searchCep/static/css/main.2bea0c17.css",
+    "main.js": "/searchCep/static/js/main.716c8474.js",
+    "index.html": "/searchCep/index.html",
+    "main.2bea0c17.css.map": "/searchCep/static/css/main.2bea0c17.css.map",
+    "main.716c8474.js.map": "/searchCep/static/js/main.716c8474.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bea0c17.css",
+    "static/js/main.716c8474.js"
+  ]
+}
