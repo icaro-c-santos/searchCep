@@ -38,17 +38,18 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 exports.showCep = void 0;
 function getNumber(value) {
-    var number = parseInt(value);
+    var newValue = value.replace("-", "");
+    var number = parseInt(newValue);
     return isNaN(number) ? null : number;
 }
 function inputValide(value) {
     if (value == null || value.length == 0) {
         throw new Error("DIGITE UM VALOR!");
     }
-    if (value.length < 8) {
-        throw new Error("CEP INCONPLETO!");
+    if (value.length < 9) {
+        throw new Error("CEP INCOMPLETO!");
     }
-    if (value.length > 8) {
+    if (value.length > 9) {
         throw new Error("NÚMEROS EXCEDEU O LIMITE DE 8 DIGITOS!");
     }
     return true;

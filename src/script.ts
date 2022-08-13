@@ -1,14 +1,15 @@
 
 function getNumber(value: any){
-        const number = parseInt(value);
+        const newValue = value.replace("-","");
+        const number = parseInt(newValue);
         return isNaN(number)? null : number;
 }
 
 
 function inputValide(value: any){
     if(value == null || value.length == 0){throw new Error("DIGITE UM VALOR!")}
-    if(value.length<8 ){throw new Error("CEP INCOMPLETO!")}
-    if(value.length >8){throw new Error("NÚMEROS EXCEDEU O LIMITE DE 8 DIGITOS!")}
+    if(value.length<9 ){throw new Error("CEP INCOMPLETO!")}
+    if(value.length >9){throw new Error("NÚMEROS EXCEDEU O LIMITE DE 8 DIGITOS!")}
     return true;
 }
 
@@ -30,8 +31,7 @@ function inputValide(value: any){
         }
         throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)")
     } catch (error) {
-        console.log(error);
-        throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)")
+        throw error;
        
     }
 }
