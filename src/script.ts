@@ -7,7 +7,7 @@ function getNumber(value: any){
 
 function inputValide(value: any){
     if(value == null || value.length == 0){throw new Error("DIGITE UM VALOR!")}
-    if(value.length<8 ){throw new Error("CEP INCONPLETO!")}
+    if(value.length<8 ){throw new Error("CEP INCOMPLETO!")}
     if(value.length >8){throw new Error("NÚMEROS EXCEDEU O LIMITE DE 8 DIGITOS!")}
     return true;
 }
@@ -30,7 +30,9 @@ function inputValide(value: any){
         }
         throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)")
     } catch (error) {
-        throw error;
+        console.log(error);
+        throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)")
+       
     }
 }
 
