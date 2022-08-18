@@ -1,5 +1,5 @@
 
-.block{
+.conteinerResponse{
     display: flex;
     flex-direction: column;
     background-color: beige;
@@ -20,8 +20,5 @@
     color: rgb(60, 0, 255);
     cursor: pointer;
 }
-h3{
 
-    font-size: 25px;
-}
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./field.module.css"
+import style from "./FieldSearch.module.css"
 
 
 export const FieldSearch = (props:any)=>{
@@ -25,7 +25,7 @@ export const FieldSearch = (props:any)=>{
     props.onSubmit(cep);
   
     
-    return <input type="text" id="field" onInput={formateCep}  maxLength={9} onChange={cepChangeHandler}  placeholder="DIGITE O CEP"  className={style}  />;
+    return <input type="text" id="field" onInput={formateCep}  maxLength={9} onChange={cepChangeHandler}  placeholder="DIGITE O CEP"  className={style.input}  />;
 
 }
 
