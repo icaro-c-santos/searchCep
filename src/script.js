@@ -47,7 +47,7 @@ function inputValide(value) {
         throw new Error("DIGITE UM VALOR!");
     }
     if (value.length < 9) {
-        throw new Error("CEP INCOMPLETO!");
+        throw new Error("CEP INCOMPLETO AAA!");
     }
     if (value.length > 9) {
         throw new Error("NÚMEROS EXCEDEU O LIMITE DE 8 DIGITOS!");
