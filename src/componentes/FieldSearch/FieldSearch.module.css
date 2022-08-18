@@ -1,4 +1,4 @@
-input{
+.input{
     width: 500px;
     height: 50px;
     border-radius: 40px;
@@ -8,12 +8,13 @@ input{
     align-self: center;
 }
 
-input::placeholder{
+
+.input::placeholder{
     text-align: center;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

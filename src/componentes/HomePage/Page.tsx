@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Header } from "../Header/Header";
 import {Formulario }from "../Form/Form";
 import { showCep } from "../../script";
-import { Respons } from "../Response/Responde";
+import { Response } from "../Response/Responde";
 import { ErroConteiner } from "../ErroConteiner/ErroConteiner";
 
 
@@ -22,7 +22,7 @@ export default () => {
     })
 }
   const showConteinerCep = (response:any)=>{
-    setconteinerResponse(<Respons onClickClosed={clearConteinerCep}   obj={{bairro:response.bairro,rua:response.logradouro,cidade:response.localidade,uf:response.uf}}></Respons>)
+    setconteinerResponse(<Response onClickClosed={clearConteinerCep}   obj={{bairro:response.bairro,rua:response.logradouro,cidade:response.localidade,uf:response.uf}}></Response>)
   }
 
   const showConteinerErro = (erro:String)=>{
@@ -32,16 +32,17 @@ export default () => {
 
  const searchCep = ()=>{
     showCep(inputCep.cep).then(response=>{
-      showConteinerCep(response);
+      if(response.erro){
+        showConteinerErro("CEP NÃO ENCONTRADO!");
+      }else{
+        showConteinerCep(response)
+      }
     }).catch(error=>{
       showConteinerErro(error.message);
     })
  }
 
 
-
-
-   
   return <React.Fragment>
     <Header ></Header>
     {conteinerResponse}

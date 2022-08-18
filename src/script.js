@@ -52,37 +52,34 @@ function inputValide(value) {
     if (value.length > 9) {
         throw new Error("NÚMEROS EXCEDEU O LIMITE DE 8 DIGITOS!");
     }
+    if (value[0] == 0) {
+        throw new Error("CEP INVALIDO!");
+    }
     return true;
 }
 function searchCep(cep) {
     return __awaiter(this, void 0, void 0, function () {
-        var number, result, res, error_1;
+        var number, result, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    _a.trys.push([0, 4, , 5]);
                     inputValide(cep);
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 5, , 6]);
                     number = getNumber(cep);
                     return [4 /*yield*/, fetch("https://viacep.com.br/ws/".concat(number, "/json/"))];
-                case 1:
-                    result = _a.sent();
-                    if (!(result.status == 200)) return [3 /*break*/, 3];
-                    return [4 /*yield*/, result.json()];
                 case 2:
-                    res = _a.sent();
-                    console.log(res);
-                    if (res.erro) {
-                        throw new Error("CEP NÃO ENCONTRADO!");
-                    }
-                    else {
-                        return [2 /*return*/, res];
-                    }
-                    _a.label = 3;
-                case 3: throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)");
-                case 4:
+                    result = _a.sent();
+                    console.log(result);
+                    if (!(result.status == 200)) return [3 /*break*/, 4];
+                    return [4 /*yield*/, result.json()];
+                case 3: return [2 /*return*/, _a.sent()];
+                case 4: throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)");
+                case 5:
                     error_1 = _a.sent();
-                    throw error_1;
-                case 5: return [2 /*return*/];
+                    throw new Error("ERRO NO SERVIDOR! - VOLTE MAIS TARDE :)");
+                case 6: return [2 /*return*/];
             }
         });
     });
